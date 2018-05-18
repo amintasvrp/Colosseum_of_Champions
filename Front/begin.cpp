@@ -7,18 +7,18 @@
 
 
 
-    char venceuBatalha() {
+    char battleWon() {
         printf("Muito bem, voce avancou ao proximo nivel!!\n");
         printf("Ainda faltam" + jogadasQueFaltam + "batalhas");
 
         //recebeHeroi()
     }
 
-    char perdeuBatalha() {
+    char battleLost() {
         printf("Game Over, mais sorte na proxima tentativa, se tiver coragem...");
     }
 
-    char venceuJogo() {
+    char gameWon() {
         printf("Parabens, a voce pertence a gloria dos campeoes!!!");
     }
 
@@ -42,13 +42,13 @@ int main(){
 
 
     if(y == 10) {
-        perdeuBatalha();
+        battleLost();
     }
     
     // if(vitoriaBatalha) {
-    //    venceuBatalha(); 
+    //    battleWon(); 
     // }
-    /*if(vitoriaFinal) {
+    /*if(gameWon) {
 
     }*/
  return 0;
