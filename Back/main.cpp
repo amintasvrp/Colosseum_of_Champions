@@ -16,6 +16,8 @@ void removeChampion(vector<string> &vector, unsigned int index);
 
 int calculateDamageWithAdvantage(string damage, string attackerClass, string defenderClass);
 
+vector<string> generateAttributesOfChampions(string str);
+
 int main() {
     vector<string> champions;
     vector<string> team;
@@ -79,4 +81,15 @@ int calculateDamageWithAdvantage(string damage, string attackerClass, string def
 		result *= 1.25;
 	}
 	return result;
+}
+
+vector<string> generateAttributesOfChampions(string str) {
+    char delim = '.';
+    stringstream ss(str);
+    string item;
+    vector<string> tokens;
+    while (getline(ss, item, delim)) {
+        tokens.push_back(item);
+    }
+    return tokens;
 }
