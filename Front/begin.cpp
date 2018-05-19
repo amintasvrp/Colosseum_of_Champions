@@ -4,28 +4,25 @@
 #include <string>
 
 
-
-
-
     char battleWon() {
-        printf("Muito bem, voce avancou ao proximo nivel!!\n");
-        printf("Ainda faltam" + jogadasQueFaltam + "batalhas");
+        printf("Very good, you advanced to the next level!!!\n");
+        printf("Are still missing %d battles\n", jogadasQueFaltam);
 
         //recebeHeroi()
     }
 
     char battleLost() {
-        printf("Game Over, mais sorte na proxima tentativa, se tiver coragem...");
+        printf("Game Over, more luck in the next attempt, if you have the courage...");
     }
 
     char gameWon() {
-        printf("Parabens, a voce pertence a gloria dos campeoes!!!");
+        printf("Congratulations, you belong to the glory of the champions!!!");
     }
 
 int main(){
-    printf("Welcome to the Colosseum of Champions!! \n" );
-    printf("Preparesse para uma grande aventura que pode resultar na sua gloria...\n");
-    printf("...ou no seu esquecimento...\n");
+    printf("Welcome to the Colosseum of Champions!!!\n" );
+    printf("Get ready for a great adventure that could result in your glory...\n");
+    printf("...or in its oblivion....\n");
     
 
     int jogadasQueFaltam = 10; 
