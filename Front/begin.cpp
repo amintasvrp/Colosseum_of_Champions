@@ -44,7 +44,7 @@ void startGame() {
 
 // A função main() inicia a execução do programa
 
-void Menu() {
+void menu() {
     string option;
 
     while(true) {
