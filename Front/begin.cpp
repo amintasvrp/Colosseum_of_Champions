@@ -5,25 +5,24 @@
 
 
     char battleWon() {
-        printf("Very good, you advanced to the next level!!!\n");
-        printf("Are still missing %d battles\n", jogadasQueFaltam);
+        std::cout << "Very good, you advanced to the next level!!!\n" << std::endl;
+        std::cout << "Are still missing "<< jogadasQueFaltam << " battles" << std::endl;
 
         //recebeHeroi()
     }
 
     char battleLost() {
-        printf("Game Over, more luck in the next attempt, if you have the courage...");
+        std::cout << "Game Over, more luck in the next attempt, if you have the courage..." << std::endl;
     }
 
     char gameWon() {
-        printf("Congratulations, you belong to the glory of the champions!!!");
+        std::cout << "Congratulations, you belong to the glory of the champions!!!" << std::endl;
     }
 
 int main(){
-    printf("Welcome to the Colosseum of Champions!!!\n" );
-    printf("Get ready for a great adventure that could result in your glory...\n");
-    printf("...or in its oblivion....\n");
-    
+    std::cout << "Welcome to the Colosseum of Champions!!!" << std::endl;
+    std::cout << "Get ready for a great adventure that could result in your glory..." << std::endl;
+    std::cout << "...or in its oblivion...." << std::endl;    
 
     int jogadasQueFaltam = 10; 
     int x;
