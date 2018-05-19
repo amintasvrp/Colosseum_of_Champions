@@ -14,7 +14,7 @@ using namespace std;
     
     // battleLost poerá ser uma função sem retorno, basta chamar para ela executar o game over!
     // caso haja retorno teríamos que concatenar, daria muito trabalho... ??? (podemos ver)
-    battleLost()  {
+    void battleLost()  {
 
     cout << " $$$$$$\   $$$$$$\  $$\      $$\ $$$$$$$$\        $$$$$$\  $$\    $$\ $$$$$$$$\ $$$$$$$\  " << endl;
     cout << "$$  __$$\ $$  __$$\ $$$\    $$$ |$$  _____|      $$  __$$\ $$ |   $$ |$$  _____|$$  __$$\ " << endl;
@@ -29,7 +29,7 @@ using namespace std;
 
 }
 
-    gameWon() {
+    void gameWon() {
 
         cout << "   ___                            _         _       _   _" << endl;
         cout << "  / __\___  _ __   __ _ _ __ __ _| |_ _   _| | __ _| |_(_) ___  _ __  ___" << endl;
