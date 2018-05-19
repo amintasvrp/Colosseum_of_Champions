@@ -4,15 +4,15 @@
 
 using namespace std;
 
-void createChampions(vector<string> &);
+void createChampions(vector<string> &vector);
 
-void createTeam(vector<string> &, vector<string> &);
+void createTeam(vector<string> &srcVector, vector<string> &destVector);
 
 unsigned int randomIndex(unsigned int upper);
 
-void addChampion(vector<string> &, vector<string> &, unsigned int index);
+void addChampion(vector<string> &srcVector, vector<string> &destVector, unsigned int index);
 
-void removeChampion(vector<string> &, unsigned int index);
+void removeChampion(vector<string> &vector, unsigned int index);
 
 int calculateDamageWithAdvantage(string damage, string attackerClass, string defenderClass);
 
@@ -43,7 +43,7 @@ void createChampions(vector<string> &vector) {
 
 void createTeam(vector<string> &srcVector, vector<string> &destVector) {
     for (unsigned int i = 0; i < 3; i++) {
-        unsigned int index = randomIndex(srcVector.size() - 1);
+        unsigned int index = randomIndex(static_cast<unsigned int>(srcVector.size() - 1));
 
         addChampion(srcVector, destVector, index);
         removeChampion(srcVector, index);
