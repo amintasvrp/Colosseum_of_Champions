@@ -14,6 +14,8 @@ void addChampion(vector<string> &, vector<string> &, unsigned int index);
 
 void removeChampion(vector<string> &, unsigned int index);
 
+int calculateDamageWithAdvantage(string damage, string attackerClass, string defenderClass);
+
 int main() {
     vector<string> champions;
     vector<string> team;
@@ -61,3 +63,20 @@ void removeChampion(vector<string> &vector, unsigned int index) {
     vector.erase(vector.begin() + index);
 }
 
+int calculateDamageWithAdvantage(string damage, string attackerClass, string defenderClass){
+	int result = stoi(damage, nullptr);
+	if((attackerClass.compare("Mutant") == 0) && (defenderClass.compare("Skill") == 0)) {
+		result *= 1.25;
+	} else if((attackerClass.compare("Skill") == 0) && (defenderClass.compare("Science") == 0)){
+		result *= 1.25;
+	} else if((attackerClass.compare("Science") == 0) && (defenderClass.compare("Mystic") == 0)){
+		result *= 1.25;
+	} else if((attackerClass.compare("Mystic") == 0) && (defenderClass.compare("Cosmic") == 0)){
+		result *= 1.25;
+	} else if((attackerClass.compare("Cosmic") == 0) && (defenderClass.compare("Tech") == 0)){
+		result *= 1.25;
+	} else if((attackerClass.compare("Tech") == 0) && (defenderClass.compare("Mutant") == 0)){
+		result *= 1.25;
+	}
+	return result;
+}
