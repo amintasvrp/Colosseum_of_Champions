@@ -10,10 +10,23 @@
 
         //recebeHeroi()
     }
+    
+    // battleLost poerá ser uma função sem retorno, basta chamar para ela executar o game over!
+    // caso haja retorno teríamos que concatenar, daria muito trabalho... ??? (podemos ver)
+    battleLost()  {
 
-    char battleLost() {
-        std::cout << "Game Over, more luck in the next attempt, if you have the courage..." << std::endl;
-    }
+    cout << " $$$$$$\   $$$$$$\  $$\      $$\ $$$$$$$$\        $$$$$$\  $$\    $$\ $$$$$$$$\ $$$$$$$\  " << endl;
+    cout << "$$  __$$\ $$  __$$\ $$$\    $$$ |$$  _____|      $$  __$$\ $$ |   $$ |$$  _____|$$  __$$\ " << endl;
+    cout << "$$ /  \__|$$ /  $$ |$$$$\  $$$$ |$$ |            $$ /  $$ |$$ |   $$ |$$ |      $$ |  $$ |" << endl;
+    cout << "$$ |$$$$\ $$$$$$$$ |$$\$$\$$ $$ |$$$$$\          $$ |  $$ |\$$\  $$  |$$$$$\    $$$$$$$  |" << endl;
+    cout << "$$ |\_$$ |$$  __$$ |$$ \$$$  $$ |$$  __|         $$ |  $$ | \$$\$$  / $$  __|   $$  __$$< " << endl;
+    cout << "$$ |  $$ |$$ |  $$ |$$ |\$  /$$ |$$ |            $$ |  $$ |  \$$$  /  $$ |      $$ |  $$ |" << endl;
+    cout << "\$$$$$$  |$$ |  $$ |$$ | \_/ $$ |$$$$$$$$\        $$$$$$  |   \$  /   $$$$$$$$\ $$ |  $$ |" << endl;
+    cout << " \______/ \__|  \__|\__|     \__|\________|       \______/     \_/    \________|\__|  \__|" << endl;
+
+    cout << "\nmore luck in the next attempt, if you have the courage..." << endl;
+
+}
 
     char gameWon() {
         std::cout << "Congratulations, you belong to the glory of the champions!!!" << std::endl;
