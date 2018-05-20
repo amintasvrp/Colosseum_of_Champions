@@ -6,7 +6,7 @@
 
 using namespace std;
 
-string split(string word, char characterToBbreak) {
+string split(string word, char characterToBreak) {
     int i;
     string temporaryWord = "";
 
