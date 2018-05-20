@@ -6,6 +6,24 @@
 
 using namespace std;
 
+string split(string word, char characterToBbreak) {
+    int i;
+    string temporaryWord = "";
+
+    for(i = 0; i < word.length(); i++)
+    {
+        if (word.at(i) == characterToBbreak)
+        {
+            temporaryWord += " ";
+        }
+        else
+        {
+            temporaryWord += word.at(i);
+        }
+    }
+    return temporaryWord;
+}
+
 void createChampions(vector<string> &vector) {
     vector.push_back("Cosmic.Thanos.250.60.120.40");
     vector.push_back("Cosmic.Thor.200.50.100.30");
@@ -64,11 +82,11 @@ void specifyChampions(vector <string> champions) {
     {
         if (i < 9)
         {
-            cout << "0" << (i + 1) << " - " << champions[i] << "\n";
+            cout << "0" << (i + 1) << " - " << split(champions[i], '.') << "\n";
         }
         else
         {
-            cout << (i + 1) << " - " << champions[i] << "\n";
+            cout << (i + 1) << " - " << split(champions[i], '.') << "\n";
         }
     }
 
