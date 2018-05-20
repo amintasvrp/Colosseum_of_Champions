@@ -9,7 +9,7 @@
 
 using namespace std;
 
-// Functions implemented by Back Team 
+// Functions implemented by Back Team
 
 void createChampions();
 void createTeam();
@@ -132,6 +132,14 @@ vector<string> generateAttributesOfChampions(string str) {
     return tokens;
 }
 
+//Check if the player has won the game.
+int checkFinalVictory(){
+    if (champions.size() == 0){
+        return 1;
+    }else{
+        return 0;
+    }
+}
 
 /*     -------         FRONT IMPLEMENTATIONS      --------    */
 
