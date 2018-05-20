@@ -98,6 +98,14 @@ int calculateDamageWithAdvantage(string damage, string attackerClass, string def
     }
     return result;
 }
+//Checks if the player has won the game.
+int checkFinalVictory(){
+    if (champions.size() == 0){
+        return 1;
+    }else{
+        return 0;
+    }
+}
 
 vector<string> generateAttributesOfChampions(string str) {
     char delim = '.';
