@@ -4,10 +4,6 @@
 
 using namespace std;
 
-vector<string> champions;
-vector<string> team;
-vector<string> enemy;
-
 void createChampions();
 void createTeam();
 void createEnemy();
@@ -21,10 +17,6 @@ int calculateDamageWithAdvantage(string damage, string attackerClass, string def
 vector<string> generateAttributesOfChampions(string str);
 
 int main() {
-    createChampions();
-    createTeam();
-    createEnemy();
-
     return 0;
 }
 
@@ -44,24 +36,24 @@ void createChampions() {
     champions.push_back("Tech.Ultron.200.50.100.30");
 }
 
-// Randomize three champions and add them to the `team` vector
+// Randomize three champions from the `champions` vector and move them to the `team` vector
 void createTeam() {
     for (int i = 0; i < 3; ++i) {
         randomizeChampion(team);
     }
 }
 
-// Randomize a champion and add it to the `enemy` vector
+// Randomize a champion from the `champions` vector and move him/her to the `enemy` vector
 void createEnemy() {
     randomizeChampion(enemy);
 }
 
-// Add the defeated enemy to the `team` vector
+// Move the defeated enemy to the `team` vector
 void addTeammate() {
     moveChampion(enemy, team, 0);
 }
 
-// Randomize a champion and add it to a vector
+// Randomize a champion from the `champions` vector and move him/her to a vector
 void randomizeChampion(vector<string> &vector) {
     int index = randomizeIndex();
     moveChampion(champions, vector, index);
