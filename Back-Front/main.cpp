@@ -133,11 +133,41 @@ vector<string> generateAttributesOfChampions(string str) {
 }
 
 //Check if the player has won the game.
-int checkFinalVictory(){
-    if (champions.size() == 0){
-        return 1;
-    }else{
-        return 0;
+bool checkFinalVictory()
+{
+    if (champions.size() == 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+//Check if the player won the battle (partial victory)
+bool checkPartialVictory(int hpInimigo)
+{
+    if (hpInimigo <= 0)
+    {
+        return true;
+    }
+    else
+    {
+       return false;
+    }
+}
+
+//Check if the player has lost the battle.
+bool checkBattleLost(int hp1, int hp2, int hp3)
+{
+    if (hp1 == 0 && hp2 == 0 && hp3 ==0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
     }
 }
 
