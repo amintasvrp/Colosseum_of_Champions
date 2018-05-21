@@ -1,15 +1,17 @@
 // Libraries
 
 #include <ctime>
-#include <sstream>
-#include <vector>
 #include <iostream>
-#include <string>
+#include <sstream>
 #include <vector>
 
 using namespace std;
 
 // Functions implemented by Back Team
+
+vector<string> champions;
+vector<string> team;
+vector<string> enemy;
 
 void createChampions();
 void createTeam();
@@ -28,10 +30,9 @@ vector<string> generateAttributesOfChampions(string str);
 string split(string word, char characterToBreak);
 void battleLost();
 void gameWon();
-void specifyChampions(vector <string> champions);
+void specifyChampions(vector<string> champions);
 void startGame();
 void menu();
-
 
 int main() {
     menu();
@@ -133,40 +134,28 @@ vector<string> generateAttributesOfChampions(string str) {
 }
 
 //Check if the player has won the game.
-bool checkFinalVictory()
-{
-    if (champions.size() == 0)
-    {
+bool checkFinalVictory() {
+    if (champions.size() == 0) {
         return true;
-    }
-    else
-    {
+    } else {
         return false;
     }
 }
 
 //Check if the player won the battle (partial victory)
-bool checkPartialVictory(int hpInimigo)
-{
-    if (hpInimigo <= 0)
-    {
+bool checkPartialVictory(int hpInimigo) {
+    if (hpInimigo <= 0) {
         return true;
-    }
-    else
-    {
-       return false;
+    } else {
+        return false;
     }
 }
 
 //Check if the player has lost the battle.
-bool checkBattleLost(int hp1, int hp2, int hp3)
-{
-    if (hp1 <= 0 && hp2 <= 0 && hp3 <=0)
-    {
+bool checkBattleLost(int hp1, int hp2, int hp3) {
+    if (hp1 <= 0 && hp2 <= 0 && hp3 <= 0) {
         return true;
-    }
-    else
-    {
+    } else {
         return false;
     }
 }
@@ -177,30 +166,26 @@ string split(string word, char characterToBreak) {
     int i;
     string temporaryWord = "";
 
-    for(i = 0; i < word.length(); i++)
-    {
-        if (word.at(i) == characterToBbreak)
-        {
+    for (i = 0; i < word.length(); i++) {
+        if (word.at(i) == characterToBreak) {
             temporaryWord += " ";
-        }
-        else
-        {
+        } else {
             temporaryWord += word.at(i);
         }
     }
     return temporaryWord;
 }
 
-void battleLost()  {
+void battleLost() {
 
-    cout << " $$$$$$\   $$$$$$\  $$\      $$\ $$$$$$$$\        $$$$$$\  $$\    $$\ $$$$$$$$\ $$$$$$$\  " << endl;
+    /*cout << " $$$$$$\   $$$$$$\  $$\      $$\ $$$$$$$$\        $$$$$$\  $$\    $$\ $$$$$$$$\ $$$$$$$\  " << endl;
     cout << "$$  __$$\ $$  __$$\ $$$\    $$$ |$$  _____|      $$  __$$\ $$ |   $$ |$$  _____|$$  __$$\ " << endl;
     cout << "$$ /  \__|$$ /  $$ |$$$$\  $$$$ |$$ |            $$ /  $$ |$$ |   $$ |$$ |      $$ |  $$ |" << endl;
     cout << "$$ |$$$$\ $$$$$$$$ |$$\$$\$$ $$ |$$$$$\          $$ |  $$ |\$$\  $$  |$$$$$\    $$$$$$$  |" << endl;
     cout << "$$ |\_$$ |$$  __$$ |$$ \$$$  $$ |$$  __|         $$ |  $$ | \$$\$$  / $$  __|   $$  __$$< " << endl;
     cout << "$$ |  $$ |$$ |  $$ |$$ |\$  /$$ |$$ |            $$ |  $$ |  \$$$  /  $$ |      $$ |  $$ |" << endl;
     cout << "\$$$$$$  |$$ |  $$ |$$ | \_/ $$ |$$$$$$$$\        $$$$$$  |   \$  /   $$$$$$$$\ $$ |  $$ |" << endl;
-    cout << " \______/ \__|  \__|\__|     \__|\________|       \______/     \_/    \________|\__|  \__|" << endl;
+    cout << " \______/ \__|  \__|\__|     \__|\________|       \______/     \_/    \________|\__|  \__|" << endl;*/
 
     cout << "\n\nmore luck in the next attempt, if you have the courage..." << endl;
 
@@ -208,18 +193,18 @@ void battleLost()  {
 
 void gameWon() {
 
-    cout << "   ___                            _         _       _   _" << endl;
+    /*cout << "   ___                            _         _       _   _" << endl;
     cout << "  / __\___  _ __   __ _ _ __ __ _| |_ _   _| | __ _| |_(_) ___  _ __  ___" << endl;
     cout << " / /  / _ \| '_ \ / _` | '__/ _` | __| | | | |/ _` | __| |/ _ \| '_ \/ __|" << endl;
     cout << "/ /__| (_) | | | | (_| | | | (_| | |_| |_| | | (_| | |_| | (_) | | | \__ \ " << endl;
     cout << "\____/\___/|_| |_|\__, |_|  \__,_|\__|\__,_|_|\__,_|\__|_|\___/|_| |_|___/" << endl;
-    cout << "                  |___/" << endl;
+    cout << "                  |___/" << endl;*/
 
     cout << "\n\nYou belong to the glory of the champions!!!" << endl;
 
 }
 
-void specifyChampions(vector <string> champions) {
+void specifyChampions(vector<string> champions) {
     int numberOfChampions, i;
 
     cout << "Meet our champions\n" << endl;
@@ -227,15 +212,10 @@ void specifyChampions(vector <string> champions) {
     numberOfChampions = champions.size();
 
 
-
-    for(i = 0; i < numberOfChampions; i++)
-    {
-        if (i < 9)
-        {
+    for (i = 0; i < numberOfChampions; i++) {
+        if (i < 9) {
             cout << "0" << (i + 1) << " - " << split(champions[i], '.') << "\n";
-        }
-        else
-        {
+        } else {
             cout << (i + 1) << " - " << split(champions[i], '.') << "\n";
         }
     }
@@ -250,9 +230,7 @@ void startGame() {
     cout << "Get ready for a great adventure that could result in your glory..." << endl;
     cout << "...or in its oblivion....\n\n" << endl;
 
-    vector <string> champions;
-
-    createChampions(champions);
+    createChampions();
 
     specifyChampions(champions);
 }
@@ -260,32 +238,20 @@ void startGame() {
 void menu() {
     string option;
 
-    while(true) {
+    while (true) {
 
         cout << "Do you want to play? \n(1) Yes\n(2) No\n\nOption: ";
         cin >> option;
 
-        if (option == "1")
-        {
+        if (option == "1") {
             startGame();
-        }
-        else if (option == "2")
-        {
+        } else if (option == "2") {
             break;
-        }
-        else
-        {
+        } else {
             cout << "\nInvalid Option\n" << endl;
         }
     }
 
-    cout << "\nTank You!!!\n\n" << endl;
+    cout << "\nThank You!!!\n\n" << endl;
 
 }
-
-
-
-
-
-
-
