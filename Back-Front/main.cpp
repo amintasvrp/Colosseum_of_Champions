@@ -6,6 +6,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <time.h>
+#include <stdlib.h> 
+
 
 using namespace std;
 
@@ -31,7 +34,10 @@ void gameWon();
 void specifyChampions(vector <string> champions);
 void startGame();
 void menu();
-
+vector<string> champions;
+vector<string> team;
+vector<string> enemy;
+time_t* nullptr;
 
 int main() {
     menu();
@@ -141,7 +147,7 @@ string split(string word, char characterToBreak) {
 
     for(i = 0; i < word.length(); i++)
     {
-        if (word.at(i) == characterToBbreak)
+        if (word.at(i) == characterToBreak)
         {
             temporaryWord += " ";
         }
@@ -214,7 +220,7 @@ void startGame() {
 
     vector <string> champions;
 
-    createChampions(champions);
+    createChampions();
 
     specifyChampions(champions);
 }
