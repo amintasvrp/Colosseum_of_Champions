@@ -161,7 +161,7 @@ bool checkPartialVictory(int hpInimigo)
 //Check if the player has lost the battle.
 bool checkBattleLost(int hp1, int hp2, int hp3)
 {
-    if (hp1 == 0 && hp2 == 0 && hp3 ==0)
+    if (hp1 <= 0 && hp2 <= 0 && hp3 <=0)
     {
         return true;
     }
