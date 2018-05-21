@@ -179,7 +179,7 @@ string split(string word, char characterToBreak) {
 
     for(i = 0; i < word.length(); i++)
     {
-        if (word.at(i) == characterToBbreak)
+        if (word.at(i) == characterToBreak)
         {
             temporaryWord += " ";
         }
