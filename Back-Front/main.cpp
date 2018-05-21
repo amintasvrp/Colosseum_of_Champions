@@ -24,6 +24,9 @@ void addChampion(vector<string> &srcVector, vector<string> &destVector, int inde
 void removeChampion(vector<string> &vector, int index);
 int calDamageWithAdvantage(string damage, string attackerClass, string defenderClass);
 vector<string> generateAttributesOfChampions(string str);
+bool checkFinalVictory();
+bool checkPartialVictory(int championHP);
+bool checkBattleLost(int firstTeammateHP, int secondTeammateHP, int thirdTeammateHP);
 
 // Functions implemented by Front Team
 
@@ -135,29 +138,17 @@ vector<string> generateAttributesOfChampions(string str) {
 
 //Check if the player has won the game.
 bool checkFinalVictory() {
-    if (champions.size() == 0) {
-        return true;
-    } else {
-        return false;
-    }
+    return champions.size() == 0;
 }
 
 //Check if the player won the battle (partial victory)
-bool checkPartialVictory(int hpInimigo) {
-    if (hpInimigo <= 0) {
-        return true;
-    } else {
-        return false;
-    }
+bool checkPartialVictory(int championHP) {
+    return championHP <= 0;
 }
 
 //Check if the player has lost the battle.
-bool checkBattleLost(int hp1, int hp2, int hp3) {
-    if (hp1 <= 0 && hp2 <= 0 && hp3 <= 0) {
-        return true;
-    } else {
-        return false;
-    }
+bool checkBattleLost(int firstTeammateHP, int secondTeammateHP, int thirdTeammateHP) {
+    return checkPartialVictory(firstTeammateHP) && checkPartialVictory(secondTeammateHP) && checkPartialVictory(thirdTeammateHP);
 }
 
 /*     -------         FRONT IMPLEMENTATIONS      --------    */
@@ -178,14 +169,14 @@ string split(string word, char characterToBreak) {
 
 void battleLost() {
 
-    /*cout << " $$$$$$\   $$$$$$\  $$\      $$\ $$$$$$$$\        $$$$$$\  $$\    $$\ $$$$$$$$\ $$$$$$$\  " << endl;
+    cout << " $$$$$$\   $$$$$$\  $$\      $$\ $$$$$$$$\        $$$$$$\  $$\    $$\ $$$$$$$$\ $$$$$$$\  " << endl;
     cout << "$$  __$$\ $$  __$$\ $$$\    $$$ |$$  _____|      $$  __$$\ $$ |   $$ |$$  _____|$$  __$$\ " << endl;
     cout << "$$ /  \__|$$ /  $$ |$$$$\  $$$$ |$$ |            $$ /  $$ |$$ |   $$ |$$ |      $$ |  $$ |" << endl;
     cout << "$$ |$$$$\ $$$$$$$$ |$$\$$\$$ $$ |$$$$$\          $$ |  $$ |\$$\  $$  |$$$$$\    $$$$$$$  |" << endl;
     cout << "$$ |\_$$ |$$  __$$ |$$ \$$$  $$ |$$  __|         $$ |  $$ | \$$\$$  / $$  __|   $$  __$$< " << endl;
     cout << "$$ |  $$ |$$ |  $$ |$$ |\$  /$$ |$$ |            $$ |  $$ |  \$$$  /  $$ |      $$ |  $$ |" << endl;
     cout << "\$$$$$$  |$$ |  $$ |$$ | \_/ $$ |$$$$$$$$\        $$$$$$  |   \$  /   $$$$$$$$\ $$ |  $$ |" << endl;
-    cout << " \______/ \__|  \__|\__|     \__|\________|       \______/     \_/    \________|\__|  \__|" << endl;*/
+    cout << " \______/ \__|  \__|\__|     \__|\________|       \______/     \_/    \________|\__|  \__|" << endl;
 
     cout << "\n\nmore luck in the next attempt, if you have the courage..." << endl;
 
@@ -193,12 +184,12 @@ void battleLost() {
 
 void gameWon() {
 
-    /*cout << "   ___                            _         _       _   _" << endl;
+    cout << "   ___                            _         _       _   _" << endl;
     cout << "  / __\___  _ __   __ _ _ __ __ _| |_ _   _| | __ _| |_(_) ___  _ __  ___" << endl;
     cout << " / /  / _ \| '_ \ / _` | '__/ _` | __| | | | |/ _` | __| |/ _ \| '_ \/ __|" << endl;
     cout << "/ /__| (_) | | | | (_| | | | (_| | |_| |_| | | (_| | |_| | (_) | | | \__ \ " << endl;
     cout << "\____/\___/|_| |_|\__, |_|  \__,_|\__|\__,_|_|\__,_|\__|_|\___/|_| |_|___/" << endl;
-    cout << "                  |___/" << endl;*/
+    cout << "                  |___/" << endl;
 
     cout << "\n\nYou belong to the glory of the champions!!!" << endl;
 
