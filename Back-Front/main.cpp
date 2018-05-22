@@ -108,18 +108,19 @@ void removeChampion(vector<string> &vector, int index) {
 // Calculates the attacker's damage, checking his advantage
 int calDamageWithAdvantage(string damage, string attackerClass, string defenderClass) {
     int result = stoi(damage, nullptr);
+    int advantageMod = 1.25;
     if ((attackerClass.compare("Mutant") == 0) && (defenderClass.compare("Skill") == 0)) {
-        result *= 1.25;
+        result *= advantageMod;
     } else if ((attackerClass.compare("Skill") == 0) && (defenderClass.compare("Science") == 0)) {
-        result *= 1.25;
+        result *= advantageMod;
     } else if ((attackerClass.compare("Science") == 0) && (defenderClass.compare("Mystic") == 0)) {
-        result *= 1.25;
+        result *= advantageMod;
     } else if ((attackerClass.compare("Mystic") == 0) && (defenderClass.compare("Cosmic") == 0)) {
-        result *= 1.25;
+        result *= advantageMod;
     } else if ((attackerClass.compare("Cosmic") == 0) && (defenderClass.compare("Tech") == 0)) {
-        result *= 1.25;
+        result *= advantageMod;
     } else if ((attackerClass.compare("Tech") == 0) && (defenderClass.compare("Mutant") == 0)) {
-        result *= 1.25;
+        result *= advantageMod;
     }
     return result;
 }
