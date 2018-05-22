@@ -38,8 +38,13 @@ void specifyChampions(vector<string> champions);
 void startGame();
 void menu();
 
+/*     -------         MAIN EXECUTION      --------    */
+
 int main() {
-    menu();
+    //menu();
+    /*createChampions();
+    createTeam();
+    specifyChampions(team);*/
     return 0;
 }
 
@@ -47,24 +52,27 @@ int main() {
 
 // Populate the `champions` vector
 void createChampions() {
-    champions.push_back("Cosmic.Thanos.400.83.125.21");
-    champions.push_back("Cosmic.Thor.420.88.132.20");
-    champions.push_back("Mutant.Deadpool.320.63.95.25");
-    champions.push_back("Mutant.Wolverine.300.58.87.26");
-    champions.push_back("Mystic.Doctor Strange.380.78.117.22");
-    champions.push_back("Mystic.Loki.340.68.102.24");
-    champions.push_back("Science.Captain America.260.48.72.28");
     champions.push_back("Science.Spider-Man.200.33.50.31");
     champions.push_back("Skill.Black Panther.220.38.57.30");
     champions.push_back("Skill.Winter Soldier.240.43.65.29");
+    champions.push_back("Science.Captain America.260.48.72.28");
     champions.push_back("Tech.Iron Man.280.53.80.27");
+    champions.push_back("Mutant.Wolverine.300.58.87.26");
+    champions.push_back("Mutant.Deadpool.320.63.95.25");
+    champions.push_back("Mystic.Loki.340.68.102.24");
     champions.push_back("Tech.Ultron.360.73.110.23");
+    champions.push_back("Mystic.Doctor Strange.380.78.117.22");
+    champions.push_back("Cosmic.Thanos.400.83.125.21");
+    champions.push_back("Cosmic.Thor.420.88.132.20");
 }
 
 // Randomize three champions from the `champions` vector and move them to the `team` vector
 void createTeam() {
+
     for (int i = 0; i < 3; ++i) {
-        randomizeChampion(team);
+        srand(time(nullptr));
+        int index = rand() % ((champions.size()/2) - 1);
+        moveChampion(champions, team, index);
     }
 }
 
@@ -109,7 +117,7 @@ void removeChampion(vector<string> &vector, int index) {
 // Calculates the attacker's damage, checking his advantage
 int calDamageWithAdvantage(string damage, string attackerClass, string defenderClass) {
     int result = stoi(damage, nullptr);
-    int advantageMod = 1.25;
+    float advantageMod = 1.25;
     if ((attackerClass.compare("Mutant") == 0) && (defenderClass.compare("Skill") == 0)) {
         result *= advantageMod;
     } else if ((attackerClass.compare("Skill") == 0) && (defenderClass.compare("Science") == 0)) {
