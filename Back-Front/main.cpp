@@ -46,18 +46,18 @@ int main() {
 
 // Populate the `champions` vector
 void createChampions() {
-    champions.push_back("Cosmic.Thanos.250.60.120.40");
-    champions.push_back("Cosmic.Thor.200.50.100.30");
-    champions.push_back("Mutant.Deadpool.200.50.100.30");
-    champions.push_back("Mutant.Wolverine.200.50.100.30");
-    champions.push_back("Mystic.Doctor Strange.200.50.100.30");
-    champions.push_back("Mystic.Loki.200.50.100.30");
-    champions.push_back("Science.Captain America.200.50.100.30");
-    champions.push_back("Science.Spider-Man.200.50.100.30");
-    champions.push_back("Skill.Black Panther.200.50.100.30");
-    champions.push_back("Skill.Winter Soldier.200.50.100.30");
-    champions.push_back("Tech.Iron Man.200.50.100.30");
-    champions.push_back("Tech.Ultron.200.50.100.30");
+    champions.push_back("Cosmic.Thanos.400.83.125.21");
+    champions.push_back("Cosmic.Thor.420.88.132.20");
+    champions.push_back("Mutant.Deadpool.320.63.95.25");
+    champions.push_back("Mutant.Wolverine.300.58.87.26");
+    champions.push_back("Mystic.Doctor Strange.380.78.117.22");
+    champions.push_back("Mystic.Loki.340.68.102.24");
+    champions.push_back("Science.Captain America.260.48.72.28");
+    champions.push_back("Science.Spider-Man.200.33.50.31");
+    champions.push_back("Skill.Black Panther.220.38.57.30");
+    champions.push_back("Skill.Winter Soldier.240.43.65.29");
+    champions.push_back("Tech.Iron Man.280.53.80.27");
+    champions.push_back("Tech.Ultron.360.73.110.23");
 }
 
 // Randomize three champions from the `champions` vector and move them to the `team` vector
