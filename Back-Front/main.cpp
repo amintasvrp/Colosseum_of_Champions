@@ -41,10 +41,11 @@ void menu();
 /*     -------         MAIN EXECUTION      --------    */
 
 int main() {
-    //menu();
+    menu();
     /*createChampions();
     createTeam();
     specifyChampions(team);*/
+
     return 0;
 }
 
