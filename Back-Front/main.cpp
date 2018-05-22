@@ -45,7 +45,6 @@ int main() {
     /*createChampions();
     createTeam();
     specifyChampions(team);*/
-
     return 0;
 }
 
