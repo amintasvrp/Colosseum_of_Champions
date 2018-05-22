@@ -12,6 +12,7 @@ using namespace std;
 vector<string> champions;
 vector<string> team;
 vector<string> enemy;
+const int enemyAdavantageMod = 1.5;
 
 void createChampions();
 void createTeam();
