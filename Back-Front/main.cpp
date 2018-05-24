@@ -380,6 +380,7 @@ int teamDefenseInteger(vector <string> team, int indexOfTeam) {
     return atoi(integerNumber.c_str());
 }
 
+//ainda em processo
 void fight() {
     int hpEnemy = enemyHpInteger(enemy);
 
