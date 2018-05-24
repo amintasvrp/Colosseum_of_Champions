@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="Colosseum_of_Champions" targetName="Colosseum_of_Champions" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4302c4ac-f319-4b38-be03-bfb5cf1f28b3" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/Back-Front/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Back-Front/main.cpp" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Back-Front/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-293">
+              <caret line="532" column="8" selection-start-line="532" selection-start-column="8" selection-end-line="532" selection-end-column="8" />
+              <folding>
+                <element signature="e#1657#1830#0" />
+                <element signature="e#1745#1813#0" />
+                <element signature="e#1897#2658#0" />
+                <element signature="e#2661#2948#0" />
+                <element signature="e#2950#3093#0" />
+                <element signature="e#3095#3199#0" />
+                <element signature="e#3201#3410#0" />
+                <element signature="e#3412#3556#0" />
+                <element signature="e#3558#3816#0" />
+                <element signature="e#3818#4036#0" />
+                <element signature="e#4038#4194#0" />
+                <element signature="e#5251#5554#0" />
+                <element signature="e#5556#5658#0" />
+                <element signature="e#5660#5787#0" />
+                <element signature="e#5789#6050#0" />
+                <element signature="e#6052#6600#0" />
+                <element signature="e#6602#6721#0" />
+                <element signature="e#6602#7669#0" />
+                <element signature="e#7670#7728#0" />
+                <element signature="e#7670#8345#0" />
+                <element signature="e#8347#8405#0" />
+                <element signature="e#8347#8496#0" />
+                <element signature="e#8498#8590#0" />
+                <element signature="e#8498#8991#0" />
+                <element signature="e#8993#9387#0" />
+                <element signature="e#9390#9766#0" />
+                <element signature="e#9768#10169#0" />
+                <element signature="e#10171#10555#0" />
+                <element signature="e#10557#10959#0" />
+                <element signature="e#10961#11345#0" />
+                <element signature="e#11348#11729#0" />
+                <element signature="e#11731#12130#0" />
+                <element signature="e#12132#12371#0" />
+                <element signature="e#23133#23605#0" />
+                <element signature="e#23133#25022#0" />
+                <element signature="e#25025#25296#0" />
+                <element signature="e#25025#26328#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Back-Front/main.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="26" />
+    <option name="width" value="1366" />
+    <option name="height" value="742" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Colosseum_of_Champions" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Colosseum-of-Champions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Colosseum_of_Champions" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Colosseum-of-Champions" type="462c0819:PsiDirectoryNode" />
+              <item name="Back-Front" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Colosseum_of_Champions">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all" />
+    <configuration name="Colosseum_of_Champions" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Colosseum_of_Champions" TARGET_NAME="Colosseum_of_Champions" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Colosseum_of_Champions" RUN_TARGET_NAME="Colosseum_of_Champions" />
+    <list>
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.Colosseum_of_Champions" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4302c4ac-f319-4b38-be03-bfb5cf1f28b3" name="Default" comment="" />
+      <created>1527162805487</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1527162805487</updated>
+      <workItem from="1527162808835" duration="2194000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2194000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="26" width="1366" height="742" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3169839" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" weight="0.329653" />
+      <window_info anchor="bottom" id="CMake" />
+      <window_info anchor="right" id="LuaJ" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26971608" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Back-Front/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-293">
+          <caret line="532" column="8" selection-start-line="532" selection-start-column="8" selection-end-line="532" selection-end-column="8" />
+          <folding>
+            <element signature="e#1657#1830#0" />
+            <element signature="e#1745#1813#0" />
+            <element signature="e#1897#2658#0" />
+            <element signature="e#2661#2948#0" />
+            <element signature="e#2950#3093#0" />
+            <element signature="e#3095#3199#0" />
+            <element signature="e#3201#3410#0" />
+            <element signature="e#3412#3556#0" />
+            <element signature="e#3558#3816#0" />
+            <element signature="e#3818#4036#0" />
+            <element signature="e#4038#4194#0" />
+            <element signature="e#5251#5554#0" />
+            <element signature="e#5556#5658#0" />
+            <element signature="e#5660#5787#0" />
+            <element signature="e#5789#6050#0" />
+            <element signature="e#6052#6600#0" />
+            <element signature="e#6602#6721#0" />
+            <element signature="e#6602#7669#0" />
+            <element signature="e#7670#7728#0" />
+            <element signature="e#7670#8345#0" />
+            <element signature="e#8347#8405#0" />
+            <element signature="e#8347#8496#0" />
+            <element signature="e#8498#8590#0" />
+            <element signature="e#8498#8991#0" />
+            <element signature="e#8993#9387#0" />
+            <element signature="e#9390#9766#0" />
+            <element signature="e#9768#10169#0" />
+            <element signature="e#10171#10555#0" />
+            <element signature="e#10557#10959#0" />
+            <element signature="e#10961#11345#0" />
+            <element signature="e#11348#11729#0" />
+            <element signature="e#11731#12130#0" />
+            <element signature="e#12132#12371#0" />
+            <element signature="e#23133#23605#0" />
+            <element signature="e#23133#25022#0" />
+            <element signature="e#25025#25296#0" />
+            <element signature="e#25025#26328#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

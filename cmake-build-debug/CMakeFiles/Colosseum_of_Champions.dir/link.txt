@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Colosseum_of_Champions.dir/Back-Front/main.cpp.o  -o Colosseum_of_Champions 

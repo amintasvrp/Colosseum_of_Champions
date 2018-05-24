@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/amintasvrp/Github/Colosseum-of-Champions/Back-Front/main.cpp
+ctime
+-
+iostream
+-
+sstream
+-
+vector
+-
+

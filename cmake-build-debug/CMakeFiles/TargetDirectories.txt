@@ -1,0 +1,3 @@
+/home/amintasvrp/Github/Colosseum-of-Champions/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/amintasvrp/Github/Colosseum-of-Champions/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/amintasvrp/Github/Colosseum-of-Champions/cmake-build-debug/CMakeFiles/Colosseum_of_Champions.dir
