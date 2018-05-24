@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Back_Front.dir/main.cpp.o  -o Back_Front 

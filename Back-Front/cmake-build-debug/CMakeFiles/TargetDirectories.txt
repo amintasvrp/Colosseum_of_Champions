@@ -1,0 +1,3 @@
+/home/deco/CLionProjects/untitled/Back-Front/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/deco/CLionProjects/untitled/Back-Front/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/deco/CLionProjects/untitled/Back-Front/cmake-build-debug/CMakeFiles/Back_Front.dir

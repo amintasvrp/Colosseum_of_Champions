@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/deco/CLionProjects/untitled/Back-Front/main.cpp
+ctime
+-
+iostream
+-
+sstream
+-
+vector
+-
+
