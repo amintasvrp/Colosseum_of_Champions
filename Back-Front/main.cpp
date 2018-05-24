@@ -472,7 +472,6 @@ void fight() {
                 int tempNormalAtkFighter1 = normalAtkFighter1;
                 tempNormalAtkFighter1 = calDamageWithAdvantage(generateAttributesOfChampions(party[0]).at(3),
                                                                generateAttributesOfChampions(party[0]).at(0), enemy.at(0));
-                cout << tempNormalAtkFighter1 << endl;
                 hpEnemy -= (tempNormalAtkFighter1 - defenseEnemy);
                 if(hpEnemy > 0) {
                     cout << "Remaining life of " << generateAttributesOfChampions(enemy[0]).at(1) << ": " << hpEnemy << "\n"
@@ -698,6 +697,7 @@ void startGame() {
         cout << "champion already choosen" << endl;
         goto choose3;
     }
+    cout << endl;
     specifyChampions(party);
     cout << "Enemy" << endl;
     createEnemy();
