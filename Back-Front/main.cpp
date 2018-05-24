@@ -417,7 +417,7 @@ int teamDefenseInteger(vector <string> team, int indexOfTeam) {
  */
 void fight() {
 
-    int hpEnemy = enemyHpInteger(enemy);
+    int hpEnemy = enemyHpInteger(enemy) * enemyAdavantageMod;
 
     int hpFighter1 = teamHpInteger(party, 0);
     int hpFighter2 = teamHpInteger(party, 1);
@@ -474,22 +474,35 @@ void fight() {
                                                                generateAttributesOfChampions(party[0]).at(0), enemy.at(0));
                 cout << tempNormalAtkFighter1 << endl;
                 hpEnemy -= (tempNormalAtkFighter1 - defenseEnemy);
-                cout << "Remaining life of " << generateAttributesOfChampions(enemy[0]).at(1) << ": " << hpEnemy << "\n"
-                     << endl;
+                if(hpEnemy > 0) {
+                    cout << "Remaining life of " << generateAttributesOfChampions(enemy[0]).at(1) << ": " << hpEnemy << "\n"
+                         << endl;
+                } else {
+                    cout << generateAttributesOfChampions(enemy[0]).at(1) << " was defeated. \n" << endl;
+                }
+
             } else if (hpFighter2 > 0) {
                 int tempNormalAtkFighter2 = normalAtkFighter2;
                tempNormalAtkFighter2 = calDamageWithAdvantage(generateAttributesOfChampions(party[1]).at(3),
                                                               generateAttributesOfChampions(party[1]).at(0), enemy.at(0));
                 hpEnemy -= (tempNormalAtkFighter2 - defenseEnemy);
-                cout << "Remaining life of " << generateAttributesOfChampions(enemy[0]).at(1) << ": " << hpEnemy << "\n"
-                     << endl;
+                if(hpEnemy > 0) {
+                    cout << "Remaining life of " << generateAttributesOfChampions(enemy[0]).at(1) << ": " << hpEnemy << "\n"
+                         << endl;
+                } else {
+                    cout << generateAttributesOfChampions(enemy[0]).at(1) << " was defeated. \n" << endl;
+                }
             } else if (hpFighter3 > 0) {
                 int tempNormalAtkFighter3 = normalAtkFighter3;
                 tempNormalAtkFighter3 = calDamageWithAdvantage(generateAttributesOfChampions(party[2]).at(3),
                                                                generateAttributesOfChampions(party[2]).at(0), enemy.at(0));
                 hpEnemy -= (tempNormalAtkFighter3 - defenseEnemy);
-                cout << "Remaining life of " << generateAttributesOfChampions(enemy[0]).at(1) << ": " << hpEnemy << "\n"
-                     << endl;
+                if(hpEnemy > 0) {
+                    cout << "Remaining life of " << generateAttributesOfChampions(enemy[0]).at(1) << ": " << hpEnemy << "\n"
+                         << endl;
+                } else {
+                    cout << generateAttributesOfChampions(enemy[0]).at(1) << " was defeated. \n" << endl;
+                }
             }
             if(normalAttackAmount < 5) normalAttackAmount += 1;
         } else if (option == "2") {
@@ -500,24 +513,36 @@ void fight() {
                                                                     generateAttributesOfChampions(party[0]).at(0),
                                                                     enemy.at(0));
                     hpEnemy -= (tempSpecialAtkFighter1 - defenseEnemy);
-                    cout << "Remaining life of " << generateAttributesOfChampions(enemy[0]).at(1) << ": " << hpEnemy
-                         << "\n" << endl;
+                    if(hpEnemy > 0) {
+                        cout << "Remaining life of " << generateAttributesOfChampions(enemy[0]).at(1) << ": " << hpEnemy << "\n"
+                             << endl;
+                    } else {
+                        cout << generateAttributesOfChampions(enemy[0]).at(1) << " was defeated. \n" << endl;
+                    }
                 } else if (hpFighter2 > 0) {
                     int tempSpecialAtkFighter2 = specialAtkFighter2;
                     tempSpecialAtkFighter2 = calDamageWithAdvantage(generateAttributesOfChampions(party[1]).at(4),
                                                                     generateAttributesOfChampions(party[1]).at(0),
                                                                     enemy.at(0));
                     hpEnemy -= (tempSpecialAtkFighter2 - defenseEnemy);
-                    cout << "Remaining life of " << generateAttributesOfChampions(enemy[0]).at(1) << ": " << hpEnemy
-                         << "\n" << endl;
+                    if(hpEnemy > 0) {
+                        cout << "Remaining life of " << generateAttributesOfChampions(enemy[0]).at(1) << ": " << hpEnemy << "\n"
+                             << endl;
+                    } else {
+                        cout << generateAttributesOfChampions(enemy[0]).at(1) << " was defeated. \n" << endl;
+                    }
                 } else if (hpFighter3 > 0) {
                     int tempSpecialAtkFighter3 = specialAtkFighter3;
                     tempSpecialAtkFighter3 = calDamageWithAdvantage(generateAttributesOfChampions(party[2]).at(4),
                                                                     generateAttributesOfChampions(party[2]).at(0),
                                                                     enemy.at(0));
                     hpEnemy -= (tempSpecialAtkFighter3 - defenseEnemy);
-                    cout << "Remaining life of " << generateAttributesOfChampions(enemy[0]).at(1) << ": " << hpEnemy
-                         << "\n" << endl;
+                    if(hpEnemy > 0) {
+                        cout << "Remaining life of " << generateAttributesOfChampions(enemy[0]).at(1) << ": " << hpEnemy << "\n"
+                             << endl;
+                    } else {
+                        cout << generateAttributesOfChampions(enemy[0]).at(1) << " was defeated. \n" << endl;
+                    }
 
                 }
                 normalAttackAmount -= 5;
@@ -541,7 +566,8 @@ void fight() {
                                                         generateAttributesOfChampions(party[0]).at(0));
                 hpFighter1 -= tempNormalAtkEnemy - defenseFighter1;
                 if (hpFighter1 <= 0) {
-                    cout << generateAttributesOfChampions(party[0]).at(1) << " is dead\n" << endl;
+                    cout << generateAttributesOfChampions(party[0]).at(1) << " was defeated. \n" << endl;
+                    normalAttackAmount = 0;
                 } else {
                     cout << "Remaining life of " << generateAttributesOfChampions(party[0]).at(1) << ": " << hpFighter1
                          << "\n" << endl;
@@ -553,7 +579,8 @@ void fight() {
                                                             generateAttributesOfChampions(party[1]).at(0));
                 hpFighter2 -= tempNormalAtkEnemy - defenseFighter2;
                 if (hpFighter2 <= 0) {
-                    cout << generateAttributesOfChampions(party[1]).at(1) << " is dead\n" << endl;
+                    cout << generateAttributesOfChampions(party[1]).at(1) << " was defeated. \n" << endl;
+                    normalAttackAmount = 0;
                 } else {
                 cout << "Remaining life of " << generateAttributesOfChampions(party[1]).at(1) << ": " << hpFighter2
                      << "\n" << endl;
@@ -565,7 +592,8 @@ void fight() {
                                                             generateAttributesOfChampions(party[2]).at(0));
                 hpFighter3 -= tempNormalAtkEnemy - defenseFighter3;
                 if (hpFighter3 <= 0) {
-                    cout << generateAttributesOfChampions(party[2]).at(1) << " is dead\n" << endl;
+                    cout << generateAttributesOfChampions(party[2]).at(1) << " was defeated. \n" << endl;
+                    normalAttackAmount = 0;
                 } else {
                     cout << "Remaining life of " << generateAttributesOfChampions(party[2]).at(1) << ": " << hpFighter3
                          << "\n" << endl;
@@ -581,7 +609,8 @@ void fight() {
                                                              generateAttributesOfChampions(party[0]).at(0));
                 hpFighter1 -= tempSpecialAtkEnemy - defenseFighter1;
                 if (hpFighter1 <= 0) {
-                    cout << generateAttributesOfChampions(party[0]).at(1) << " is dead\n" << endl;
+                    cout << generateAttributesOfChampions(party[0]).at(1) << " was defeated. \n" << endl;
+                    normalAttackAmount = 0;
                 } else {
                     cout << "Remaining life of " << generateAttributesOfChampions(party[0]).at(1) << ": " << hpFighter1
                          << "\n" << endl;
@@ -594,7 +623,8 @@ void fight() {
                                                              generateAttributesOfChampions(party[1]).at(0));
                 hpFighter2 -= tempSpecialAtkEnemy - defenseFighter2;
                 if (hpFighter2 <= 0) {
-                    cout << generateAttributesOfChampions(party[1]).at(1) << " is dead\n" << endl;
+                    cout << generateAttributesOfChampions(party[1]).at(1) << " was defeated. \n" << endl;
+                    normalAttackAmount = 0;
                 } else {
                     cout << "Remaining life of " << generateAttributesOfChampions(party[1]).at(1) << ": " << hpFighter2
                          << "\n" << endl;
@@ -607,7 +637,8 @@ void fight() {
                                                              generateAttributesOfChampions(party[2]).at(0));
                 hpFighter3 -= tempSpecialAtkEnemy - defenseFighter3;
                 if (hpFighter3 <= 0) {
-                    cout << generateAttributesOfChampions(party[2]).at(1) << " is dead\n" << endl;
+                    cout << generateAttributesOfChampions(party[2]).at(1) << " was defeated. \n" << endl;
+                    normalAttackAmount = 0;
                 } else {
                     cout << "Remaining life of " << generateAttributesOfChampions(party[2]).at(1) << ": " << hpFighter3
                          << "\n" << endl;
