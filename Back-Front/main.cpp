@@ -207,11 +207,14 @@ string split(string word, char characterToBbreak) {
 }
 
 /*
- * The message shown when the player lose a battle/game.
+ * Show message shown when the player lose a battle/game and clear the enemy and the team vector for a new game.
  */
 
 
 void battleLost() {
+
+    enemy.clear();
+    team.clear();
 
     cout << "$$  __$$\ $$  __$$\ $$$\    $$$ |$$  _____|      $$  __$$\ $$ |   $$ |$$  _____|$$  __$$\ " << endl;
     cout << "$$ /  \__|$$ /  $$ |$$$$\  $$$$ |$$ |            $$ /  $$ |$$ |   $$ |$$ |      $$ |  $$ |" << endl;
@@ -648,7 +651,6 @@ void startGame() {
         goto choose3;
     }
     specifyChampions(party);
-    enemy.clear();
     cout << "Enemy" << endl;
     createEnemy();
     specifyChampions(enemy);
@@ -673,12 +675,17 @@ void menu() {
     specifyChampions(champions);
     createTeam();
 
-    while (champions.size() > 1) {
+    while (champions.size() > 0) {
 
         cout << "Do you want to play? \n(1) Yes\n(2) No\n\nOption: ";
         cin >> option;
 
         if (option == "1") {
+            if(team.size() < 3) {
+                champions.clear();
+                createChampions();
+                createTeam();
+            }
             cout << "\nThis is your team" << endl;
             specifyChampions(team);
             startGame();
