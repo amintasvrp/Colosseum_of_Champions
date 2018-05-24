@@ -16,7 +16,7 @@ vector<string> party;
 int partyMembers;
 
 
-const int enemyAdavantageMod = 1.5;
+const int enemyAdavantageMod = 2;
 
 void createChampions();
 void createTeam();
@@ -133,19 +133,19 @@ void removeChampion(vector<string> &vector, int index) {
 // Calculates the attacker's damage, checking his advantage
 int calDamageWithAdvantage(string damage, string attackerClass, string defenderClass) {
     int result = stoi(damage, nullptr);
-    float advantageMod = 1.25;
+    int advantageDamageMod = 4;
     if ((attackerClass.compare("Mutant") == 0) && (defenderClass.compare("Skill") == 0)) {
-        result *= advantageMod;
+        result += result/advantageDamageMod;
     } else if ((attackerClass.compare("Skill") == 0) && (defenderClass.compare("Science") == 0)) {
-        result *= advantageMod;
+        result += result/advantageDamageMod;
     } else if ((attackerClass.compare("Science") == 0) && (defenderClass.compare("Mystic") == 0)) {
-        result *= advantageMod;
+        result += result/advantageDamageMod;
     } else if ((attackerClass.compare("Mystic") == 0) && (defenderClass.compare("Cosmic") == 0)) {
-        result *= advantageMod;
+        result += result/advantageDamageMod;
     } else if ((attackerClass.compare("Cosmic") == 0) && (defenderClass.compare("Tech") == 0)) {
-        result *= advantageMod;
+        result += result/advantageDamageMod;
     } else if ((attackerClass.compare("Tech") == 0) && (defenderClass.compare("Mutant") == 0)) {
-        result *= advantageMod;
+        result += result/advantageDamageMod;
     }
     return result;
 }
@@ -417,7 +417,7 @@ int teamDefenseInteger(vector <string> team, int indexOfTeam) {
  */
 void fight() {
 
-    int hpEnemy = enemyHpInteger(enemy) * enemyAdavantageMod;
+    int hpEnemy = enemyHpInteger(enemy) + (enemyHpInteger(enemy)/enemyAdavantageMod);
 
     int hpFighter1 = teamHpInteger(party, 0);
     int hpFighter2 = teamHpInteger(party, 1);
