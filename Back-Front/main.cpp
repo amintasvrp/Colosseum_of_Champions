@@ -491,7 +491,7 @@ void fight() {
                 cout << "Remaining life of " << generateAttributesOfChampions(enemy[0]).at(1) << ": " << hpEnemy << "\n"
                      << endl;
             }
-            normalAttackAmount += 1;
+            if(normalAttackAmount < 5) normalAttackAmount += 1;
         } else if (option == "2") {
             if (normalAttackAmount >= 5) {
                 if (hpFighter1 > 0) {
@@ -557,7 +557,7 @@ void fight() {
                 } else {
                 cout << "Remaining life of " << generateAttributesOfChampions(party[1]).at(1) << ": " << hpFighter2
                      << "\n" << endl;
-                }1
+                };
             } else if (hpFighter3 >= 0) {
                 int tempNormalAtkEnemy= normalAtkEnemy;
                 tempNormalAtkEnemy = calDamageWithAdvantage(generateAttributesOfChampions(enemy[0]).at(3),
@@ -688,8 +688,6 @@ void menu() {
     cout << "...or in your oblivion....\n\n" << endl;
 
     createChampions();
-    cout << "Meet our champions" << endl;
-    specifyChampions(champions);
     createTeam();
 
     while (champions.size() > 0) {
