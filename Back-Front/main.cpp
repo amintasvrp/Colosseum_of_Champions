@@ -47,6 +47,7 @@ int enemySpecialAtkInteger(vector <string> champion);
 int teamSpecialAtkInteger(vector <string> team, int indexOfTeam);
 int enemyDefenseInteger(vector <string> champion);
 int teamDefenseInteger(vector <string> team, int indexOfTeam);
+void specifyEnemy(vector<string> enemy);
 void specifyChampions(vector<string> champions);
 void startGame();
 void menu();
@@ -247,6 +248,20 @@ void battleWon(){
 
     cout << "\n\nYou Won!!! Let's go to the next battle!!" << endl;
 
+}
+
+/*
+ * Method to print the enemy.
+ */
+void specifyEnemy(vector<string> enemy) {
+    int numberOfChampions, i;
+
+    numberOfChampions = enemy.size();
+
+    for (i = 0; i < numberOfChampions; i++) {
+        cout << split(enemy[i], '.') << "\n";
+    }
+    cout << endl;
 }
 
 /*
@@ -690,7 +705,7 @@ void startGame() {
     specifyChampions(party);
     cout << "Enemy" << endl;
     createEnemy();
-    specifyChampions(enemy);
+    specifyEnemy(enemy);
     fight();
 }
 
