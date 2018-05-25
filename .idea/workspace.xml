@@ -12,6 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4302c4ac-f319-4b38-be03-bfb5cf1f28b3" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Back-Front/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Back-Front/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -28,14 +29,12 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Back-Front/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="186" column="43" selection-start-line="186" selection-start-column="43" selection-end-line="186" selection-end-column="43" />
+            <state relative-caret-position="273">
+              <caret line="95" column="20" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
               <folding>
                 <element signature="e#1657#1830#0" />
                 <element signature="e#1745#1813#0" />
                 <element signature="e#1897#2658#0" />
-                <element signature="e#2661#2948#0" />
-                <element signature="e#2950#3093#0" />
                 <element signature="e#3095#3199#0" />
                 <element signature="e#3201#3410#0" />
                 <element signature="e#3412#3556#0" />
@@ -152,12 +151,12 @@
       <option name="presentableId" value="Default" />
       <updated>1527162805487</updated>
       <workItem from="1527162808835" duration="2194000" />
-      <workItem from="1527189251695" duration="12688000" />
+      <workItem from="1527189251695" duration="13619000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14882000" />
+    <option name="totallyTimeSpent" value="15813000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1366" height="742" extended-state="6" />
@@ -169,8 +168,8 @@
       <window_info anchor="bottom" id="CMake" order="7" />
       <window_info anchor="right" id="LuaJ" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.036277603" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.06940063" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.036277603" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.058359623" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -204,8 +203,6 @@
             <element signature="e#1657#1830#0" />
             <element signature="e#1745#1813#0" />
             <element signature="e#1897#2658#0" />
-            <element signature="e#2661#2948#0" />
-            <element signature="e#2950#3093#0" />
             <element signature="e#3095#3199#0" />
             <element signature="e#3201#3410#0" />
             <element signature="e#3412#3556#0" />
@@ -248,14 +245,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Back-Front/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="186" column="43" selection-start-line="186" selection-start-column="43" selection-end-line="186" selection-end-column="43" />
+        <state relative-caret-position="273">
+          <caret line="95" column="20" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
           <folding>
             <element signature="e#1657#1830#0" />
             <element signature="e#1745#1813#0" />
             <element signature="e#1897#2658#0" />
-            <element signature="e#2661#2948#0" />
-            <element signature="e#2950#3093#0" />
             <element signature="e#3095#3199#0" />
             <element signature="e#3201#3410#0" />
             <element signature="e#3412#3556#0" />
