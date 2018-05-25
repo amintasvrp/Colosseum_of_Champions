@@ -471,7 +471,8 @@ void fight() {
             if (hpFighter1 > 0) {
                 int tempNormalAtkFighter1 = normalAtkFighter1;
                 tempNormalAtkFighter1 = calDamageWithAdvantage(generateAttributesOfChampions(party[0]).at(3),
-                                                               generateAttributesOfChampions(party[0]).at(0), enemy.at(0));
+                                                               generateAttributesOfChampions(party[0]).at(0),
+                                                               generateAttributesOfChampions(enemy[0]).at(0));
                 hpEnemy -= (tempNormalAtkFighter1 - defenseEnemy);
                 if(hpEnemy > 0) {
                     cout << "Remaining life of " << generateAttributesOfChampions(enemy[0]).at(1) << ": " << hpEnemy << "\n"
@@ -483,7 +484,8 @@ void fight() {
             } else if (hpFighter2 > 0) {
                 int tempNormalAtkFighter2 = normalAtkFighter2;
                tempNormalAtkFighter2 = calDamageWithAdvantage(generateAttributesOfChampions(party[1]).at(3),
-                                                              generateAttributesOfChampions(party[1]).at(0), enemy.at(0));
+                                                              generateAttributesOfChampions(party[1]).at(0),
+                                                              generateAttributesOfChampions(enemy[0]).at(0));
                 hpEnemy -= (tempNormalAtkFighter2 - defenseEnemy);
                 if(hpEnemy > 0) {
                     cout << "Remaining life of " << generateAttributesOfChampions(enemy[0]).at(1) << ": " << hpEnemy << "\n"
@@ -494,7 +496,8 @@ void fight() {
             } else if (hpFighter3 > 0) {
                 int tempNormalAtkFighter3 = normalAtkFighter3;
                 tempNormalAtkFighter3 = calDamageWithAdvantage(generateAttributesOfChampions(party[2]).at(3),
-                                                               generateAttributesOfChampions(party[2]).at(0), enemy.at(0));
+                                                               generateAttributesOfChampions(party[2]).at(0),
+                                                               generateAttributesOfChampions(enemy[0]).at(0));
                 hpEnemy -= (tempNormalAtkFighter3 - defenseEnemy);
                 if(hpEnemy > 0) {
                     cout << "Remaining life of " << generateAttributesOfChampions(enemy[0]).at(1) << ": " << hpEnemy << "\n"
@@ -510,7 +513,7 @@ void fight() {
                     int tempSpecialAtkFighter1 = specialAtkFighter1;
                     tempSpecialAtkFighter1 = calDamageWithAdvantage(generateAttributesOfChampions(party[0]).at(4),
                                                                     generateAttributesOfChampions(party[0]).at(0),
-                                                                    enemy.at(0));
+                                                                    generateAttributesOfChampions(enemy[0]).at(0));
                     hpEnemy -= (tempSpecialAtkFighter1 - defenseEnemy);
                     if(hpEnemy > 0) {
                         cout << "Remaining life of " << generateAttributesOfChampions(enemy[0]).at(1) << ": " << hpEnemy << "\n"
@@ -522,7 +525,7 @@ void fight() {
                     int tempSpecialAtkFighter2 = specialAtkFighter2;
                     tempSpecialAtkFighter2 = calDamageWithAdvantage(generateAttributesOfChampions(party[1]).at(4),
                                                                     generateAttributesOfChampions(party[1]).at(0),
-                                                                    enemy.at(0));
+                                                                    generateAttributesOfChampions(enemy[0]).at(0));
                     hpEnemy -= (tempSpecialAtkFighter2 - defenseEnemy);
                     if(hpEnemy > 0) {
                         cout << "Remaining life of " << generateAttributesOfChampions(enemy[0]).at(1) << ": " << hpEnemy << "\n"
@@ -534,7 +537,7 @@ void fight() {
                     int tempSpecialAtkFighter3 = specialAtkFighter3;
                     tempSpecialAtkFighter3 = calDamageWithAdvantage(generateAttributesOfChampions(party[2]).at(4),
                                                                     generateAttributesOfChampions(party[2]).at(0),
-                                                                    enemy.at(0));
+                                                                    generateAttributesOfChampions(enemy[0]).at(0));
                     hpEnemy -= (tempSpecialAtkFighter3 - defenseEnemy);
                     if(hpEnemy > 0) {
                         cout << "Remaining life of " << generateAttributesOfChampions(enemy[0]).at(1) << ": " << hpEnemy << "\n"

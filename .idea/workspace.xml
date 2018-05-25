@@ -28,18 +28,14 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Back-Front/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="147" column="55" selection-start-line="147" selection-start-column="55" selection-end-line="147" selection-end-column="55" />
+            <state relative-caret-position="712">
+              <caret line="499" column="63" selection-start-line="499" selection-start-column="63" selection-end-line="499" selection-end-column="63" />
               <folding>
                 <element signature="e#1657#1830#0" />
                 <element signature="e#1745#1813#0" />
                 <element signature="e#2661#2948#0" />
-                <element signature="e#2950#3093#0" />
                 <element signature="e#3095#3199#0" />
-                <element signature="e#3201#3410#0" />
                 <element signature="e#3412#3556#0" />
-                <element signature="e#3558#3816#0" />
-                <element signature="e#3818#4036#0" />
                 <element signature="e#4038#4194#0" />
                 <element signature="e#5218#5521#0" />
                 <element signature="e#5523#5625#0" />
@@ -153,12 +149,12 @@
       <option name="presentableId" value="Default" />
       <updated>1527162805487</updated>
       <workItem from="1527162808835" duration="2194000" />
-      <workItem from="1527189251695" duration="7600000" />
+      <workItem from="1527189251695" duration="8799000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9794000" />
+    <option name="totallyTimeSpent" value="10993000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1366" height="742" extended-state="6" />
@@ -205,12 +201,8 @@
             <element signature="e#1657#1830#0" />
             <element signature="e#1745#1813#0" />
             <element signature="e#2661#2948#0" />
-            <element signature="e#2950#3093#0" />
             <element signature="e#3095#3199#0" />
-            <element signature="e#3201#3410#0" />
             <element signature="e#3412#3556#0" />
-            <element signature="e#3558#3816#0" />
-            <element signature="e#3818#4036#0" />
             <element signature="e#4038#4194#0" />
             <element signature="e#5218#5521#0" />
             <element signature="e#5523#5625#0" />
@@ -250,18 +242,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Back-Front/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="147" column="55" selection-start-line="147" selection-start-column="55" selection-end-line="147" selection-end-column="55" />
+        <state relative-caret-position="712">
+          <caret line="499" column="63" selection-start-line="499" selection-start-column="63" selection-end-line="499" selection-end-column="63" />
           <folding>
             <element signature="e#1657#1830#0" />
             <element signature="e#1745#1813#0" />
             <element signature="e#2661#2948#0" />
-            <element signature="e#2950#3093#0" />
             <element signature="e#3095#3199#0" />
-            <element signature="e#3201#3410#0" />
             <element signature="e#3412#3556#0" />
-            <element signature="e#3558#3816#0" />
-            <element signature="e#3818#4036#0" />
             <element signature="e#4038#4194#0" />
             <element signature="e#5218#5521#0" />
             <element signature="e#5523#5625#0" />
