@@ -95,6 +95,11 @@ void createTeam() {
 // Randomize a champion from the `champions` vector and move him/her to the `enemy` vector
 void createEnemy() {
     randomizeChampion(enemy);
+    if (champions.size() == 1) {
+        moveChampion(champions, enemy, 0);
+    } else {
+        randomizeChampion(enemy);
+    }
 }
 
 // Move the defeated enemy to the `team` vector
@@ -133,19 +138,19 @@ void removeChampion(vector<string> &vector, int index) {
 // Calculates the attacker's damage, checking his advantage
 int calDamageWithAdvantage(string damage, string attackerClass, string defenderClass) {
     int result = stoi(damage, nullptr);
-    float advantageDamageMod = result/4.0;
+    float advantageDamageMod = result/4;
     if ((attackerClass.compare("Mutant") == 0) && (defenderClass.compare("Skill") == 0)) {
         result = result + advantageDamageMod;
     } else if ((attackerClass.compare("Skill") == 0) && (defenderClass.compare("Science") == 0)) {
-        result += result + advantageDamageMod;
+        result = result + advantageDamageMod;
     } else if ((attackerClass.compare("Science") == 0) && (defenderClass.compare("Mystic") == 0)) {
-        result += result + advantageDamageMod;
+        result = result + advantageDamageMod;
     } else if ((attackerClass.compare("Mystic") == 0) && (defenderClass.compare("Cosmic") == 0)) {
-        result += result + advantageDamageMod;
+        result = result + advantageDamageMod;
     } else if ((attackerClass.compare("Cosmic") == 0) && (defenderClass.compare("Tech") == 0)) {
-        result += result + advantageDamageMod;
+        result = result + advantageDamageMod;
     } else if ((attackerClass.compare("Tech") == 0) && (defenderClass.compare("Mutant") == 0)) {
-        result += result + advantageDamageMod;
+        result = result + advantageDamageMod;
     }
     return result;
 }
@@ -482,8 +487,7 @@ void fight() {
                 }
 
             } else if (hpFighter2 > 0) {
-                int tempNormalAtkFighter2 = normalAtkFighter2;
-               tempNormalAtkFighter2 = calDamageWithAdvantage(generateAttributesOfChampions(party[1]).at(3),
+                int tempNormalAtkFighter2 = calDamageWithAdvantage(generateAttributesOfChampions(party[1]).at(3),
                                                               generateAttributesOfChampions(party[1]).at(0),
                                                               generateAttributesOfChampions(enemy[0]).at(0));
                 hpEnemy -= (tempNormalAtkFighter2 - defenseEnemy);
@@ -494,8 +498,7 @@ void fight() {
                     cout << generateAttributesOfChampions(enemy[0]).at(1) << " was defeated. \n" << endl;
                 }
             } else if (hpFighter3 > 0) {
-                int tempNormalAtkFighter3 = normalAtkFighter3;
-                tempNormalAtkFighter3 = calDamageWithAdvantage(generateAttributesOfChampions(party[2]).at(3),
+                int tempNormalAtkFighter3 = calDamageWithAdvantage(generateAttributesOfChampions(party[2]).at(3),
                                                                generateAttributesOfChampions(party[2]).at(0),
                                                                generateAttributesOfChampions(enemy[0]).at(0));
                 hpEnemy -= (tempNormalAtkFighter3 - defenseEnemy);
@@ -510,8 +513,7 @@ void fight() {
         } else if (option == "2") {
             if (normalAttackAmount >= 5) {
                 if (hpFighter1 > 0) {
-                    int tempSpecialAtkFighter1 = specialAtkFighter1;
-                    tempSpecialAtkFighter1 = calDamageWithAdvantage(generateAttributesOfChampions(party[0]).at(4),
+                    int tempSpecialAtkFighter1 = calDamageWithAdvantage(generateAttributesOfChampions(party[0]).at(4),
                                                                     generateAttributesOfChampions(party[0]).at(0),
                                                                     generateAttributesOfChampions(enemy[0]).at(0));
                     hpEnemy -= (tempSpecialAtkFighter1 - defenseEnemy);
@@ -522,8 +524,7 @@ void fight() {
                         cout << generateAttributesOfChampions(enemy[0]).at(1) << " was defeated. \n" << endl;
                     }
                 } else if (hpFighter2 > 0) {
-                    int tempSpecialAtkFighter2 = specialAtkFighter2;
-                    tempSpecialAtkFighter2 = calDamageWithAdvantage(generateAttributesOfChampions(party[1]).at(4),
+                    int tempSpecialAtkFighter2 = calDamageWithAdvantage(generateAttributesOfChampions(party[1]).at(4),
                                                                     generateAttributesOfChampions(party[1]).at(0),
                                                                     generateAttributesOfChampions(enemy[0]).at(0));
                     hpEnemy -= (tempSpecialAtkFighter2 - defenseEnemy);
@@ -534,8 +535,7 @@ void fight() {
                         cout << generateAttributesOfChampions(enemy[0]).at(1) << " was defeated. \n" << endl;
                     }
                 } else if (hpFighter3 > 0) {
-                    int tempSpecialAtkFighter3 = specialAtkFighter3;
-                    tempSpecialAtkFighter3 = calDamageWithAdvantage(generateAttributesOfChampions(party[2]).at(4),
+                    int tempSpecialAtkFighter3 = calDamageWithAdvantage(generateAttributesOfChampions(party[2]).at(4),
                                                                     generateAttributesOfChampions(party[2]).at(0),
                                                                     generateAttributesOfChampions(enemy[0]).at(0));
                     hpEnemy -= (tempSpecialAtkFighter3 - defenseEnemy);
@@ -575,8 +575,7 @@ void fight() {
                          << "\n" << endl;
                 }
             } else if (hpFighter2 >= 0) {
-                int tempNormalAtkEnemy = normalAtkEnemy;
-                tempNormalAtkEnemy = calDamageWithAdvantage(generateAttributesOfChampions(enemy[0]).at(3),
+                int tempNormalAtkEnemy = calDamageWithAdvantage(generateAttributesOfChampions(enemy[0]).at(3),
                                                             generateAttributesOfChampions(enemy[0]).at(0),
                                                             generateAttributesOfChampions(party[1]).at(0));
                 hpFighter2 -= tempNormalAtkEnemy - defenseFighter2;
@@ -588,8 +587,7 @@ void fight() {
                      << "\n" << endl;
                 };
             } else if (hpFighter3 >= 0) {
-                int tempNormalAtkEnemy= normalAtkEnemy;
-                tempNormalAtkEnemy = calDamageWithAdvantage(generateAttributesOfChampions(enemy[0]).at(3),
+                int tempNormalAtkEnemy= calDamageWithAdvantage(generateAttributesOfChampions(enemy[0]).at(3),
                                                             generateAttributesOfChampions(enemy[0]).at(0),
                                                             generateAttributesOfChampions(party[2]).at(0));
                 hpFighter3 -= tempNormalAtkEnemy - defenseFighter3;
@@ -605,8 +603,7 @@ void fight() {
         } else {
             cout << "Enemy Special Attack\n" << endl;
             if (hpFighter1 >= 0) {
-                int tempSpecialAtkEnemy= specialAtkEnemy;
-                tempSpecialAtkEnemy = calDamageWithAdvantage(generateAttributesOfChampions(enemy[0]).at(3),
+                int tempSpecialAtkEnemy= calDamageWithAdvantage(generateAttributesOfChampions(enemy[0]).at(3),
                                                              generateAttributesOfChampions(enemy[0]).at(0),
                                                              generateAttributesOfChampions(party[0]).at(0));
                 hpFighter1 -= tempSpecialAtkEnemy - defenseFighter1;
@@ -619,8 +616,7 @@ void fight() {
                 }
 
             } else if (hpFighter2 >= 0) {
-                int tempSpecialAtkEnemy= specialAtkEnemy;
-                tempSpecialAtkEnemy = calDamageWithAdvantage(generateAttributesOfChampions(enemy[0]).at(3),
+                int tempSpecialAtkEnemy= calDamageWithAdvantage(generateAttributesOfChampions(enemy[0]).at(3),
                                                              generateAttributesOfChampions(enemy[0]).at(0),
                                                              generateAttributesOfChampions(party[1]).at(0));
                 hpFighter2 -= tempSpecialAtkEnemy - defenseFighter2;
@@ -633,8 +629,7 @@ void fight() {
                 }
 
             } else if (hpFighter3 >= 0) {
-                int tempSpecialAtkEnemy= specialAtkEnemy;
-                tempSpecialAtkEnemy = calDamageWithAdvantage(generateAttributesOfChampions(enemy[0]).at(3),
+                int tempSpecialAtkEnemy= calDamageWithAdvantage(generateAttributesOfChampions(enemy[0]).at(3),
                                                              generateAttributesOfChampions(enemy[0]).at(0),
                                                              generateAttributesOfChampions(party[2]).at(0));
                 hpFighter3 -= tempSpecialAtkEnemy - defenseFighter3;
