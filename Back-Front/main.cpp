@@ -94,7 +94,11 @@ void createTeam() {
 
 // Randomize a champion from the `champions` vector and move him/her to the `enemy` vector
 void createEnemy() {
-    randomizeChampion(enemy);
+    if (champions.size() == 1) {
+        moveChampion(champions, enemy, 0);
+    } else {
+        randomizeChampion(enemy);
+    }
 }
 
 // Move the defeated enemy to the `team` vector
