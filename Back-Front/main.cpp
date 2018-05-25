@@ -133,19 +133,19 @@ void removeChampion(vector<string> &vector, int index) {
 // Calculates the attacker's damage, checking his advantage
 int calDamageWithAdvantage(string damage, string attackerClass, string defenderClass) {
     int result = stoi(damage, nullptr);
-    int advantageDamageMod = 4;
+    float advantageDamageMod = result/4.0;
     if ((attackerClass.compare("Mutant") == 0) && (defenderClass.compare("Skill") == 0)) {
-        result = result + (result/advantageDamageMod);
+        result = result + advantageDamageMod;
     } else if ((attackerClass.compare("Skill") == 0) && (defenderClass.compare("Science") == 0)) {
-        result += result + (result/advantageDamageMod);
+        result += result + advantageDamageMod;
     } else if ((attackerClass.compare("Science") == 0) && (defenderClass.compare("Mystic") == 0)) {
-        result += result + (result/advantageDamageMod);
+        result += result + advantageDamageMod;
     } else if ((attackerClass.compare("Mystic") == 0) && (defenderClass.compare("Cosmic") == 0)) {
-        result += result + (result/advantageDamageMod);
+        result += result + advantageDamageMod;
     } else if ((attackerClass.compare("Cosmic") == 0) && (defenderClass.compare("Tech") == 0)) {
-        result += result + (result/advantageDamageMod);
+        result += result + advantageDamageMod;
     } else if ((attackerClass.compare("Tech") == 0) && (defenderClass.compare("Mutant") == 0)) {
-        result += result + (result/advantageDamageMod);
+        result += result + advantageDamageMod;
     }
     return result;
 }

@@ -28,8 +28,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Back-Front/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="712">
-              <caret line="499" column="63" selection-start-line="499" selection-start-column="63" selection-end-line="499" selection-end-column="63" />
+            <state relative-caret-position="203">
+              <caret line="135" column="9" selection-start-line="135" selection-start-column="9" selection-end-line="135" selection-end-column="9" />
               <folding>
                 <element signature="e#1657#1830#0" />
                 <element signature="e#1745#1813#0" />
@@ -149,12 +149,12 @@
       <option name="presentableId" value="Default" />
       <updated>1527162805487</updated>
       <workItem from="1527162808835" duration="2194000" />
-      <workItem from="1527189251695" duration="8799000" />
+      <workItem from="1527189251695" duration="9581000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10993000" />
+    <option name="totallyTimeSpent" value="11775000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1366" height="742" extended-state="6" />
@@ -242,8 +242,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Back-Front/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="499" column="63" selection-start-line="499" selection-start-column="63" selection-end-line="499" selection-end-column="63" />
+        <state relative-caret-position="203">
+          <caret line="135" column="9" selection-start-line="135" selection-start-column="9" selection-end-line="135" selection-end-column="9" />
           <folding>
             <element signature="e#1657#1830#0" />
             <element signature="e#1745#1813#0" />
