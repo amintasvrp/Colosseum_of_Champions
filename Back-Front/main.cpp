@@ -184,7 +184,7 @@ bool checkBattleLost(int firstTeammateHP, int secondTeammateHP, int thirdTeammat
 
 /*     -------         FRONT IMPLEMENTATIONS      --------    */
 
-string split(string word, char characterToBbreak) {
+string split(string word, char characterToBreak) {
     int i;
     string temporaryWord = "";
 
@@ -192,7 +192,7 @@ string split(string word, char characterToBbreak) {
 
     for(i = 0; i < word.length(); i++)
     {
-        if (word.at(i) == characterToBbreak)
+        if (word.at(i) == characterToBreak)
         {
             temporaryWord += " ";
             countSpace ++;
