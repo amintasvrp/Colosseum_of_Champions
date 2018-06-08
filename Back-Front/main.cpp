@@ -563,7 +563,7 @@ void startGame() {
     cout << "Choose your party (select the number then hit ENTER): \n";
     choose1:
     cin >> partyMembers;
-    if (partyMembers > team.size()) {
+    if (partyMembers > team.size() || partyMembers == 0) {
         cout << "This champion doesn't exist" << endl;
         goto choose1;
     } else {
@@ -571,7 +571,7 @@ void startGame() {
     }
     choose2:
     cin >> partyMembers;
-    if (partyMembers > team.size()) {
+    if (partyMembers > team.size() || partyMembers == 0) {
         cout << "This champion doesn't exist" << endl;
         goto choose2;
     } else if (generateAttributesOfChampions(party[0]).at(1) !=
@@ -583,7 +583,7 @@ void startGame() {
     }
     choose3:
     cin >> partyMembers;
-    if (partyMembers > team.size()) {
+    if (partyMembers > team.size() || partyMembers == 0) {
         cout << "This champion doesn't exist" << endl;
         goto choose3;
     } else if (generateAttributesOfChampions(party[0]).at(1) !=
