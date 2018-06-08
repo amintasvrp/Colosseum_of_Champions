@@ -442,7 +442,7 @@ void fight() {
                 }
                 normalAttackAmount -= 5;
             } else {
-                cout << "it is not possible to use the special attack" << endl;
+                cout << "\nIt is not possible to use the special attack.\n" << endl;
                 goto atack;
             }
         } else {
