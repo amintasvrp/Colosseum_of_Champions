@@ -352,6 +352,8 @@ void fight() {
         } else {
             cout << generateAttributesOfChampions(party[2]).at(1) << endl;
         }
+        
+        attack:
         cout << "What do you want to do?\n(1) Normal Attack\n(2) Special Attack (" << normalAttackAmount << "/5)"
              << ";\nOption: ";
         cin >> option;
@@ -446,7 +448,8 @@ void fight() {
                 goto atack;
             }
         } else {
-            cout << "Invalid Option" << endl;
+            cout << "\nInvalid Option\n" << endl;
+            goto attack;
         }
 
         cout << "Status Enemy Special Attack (" << enemyNormalAttackAmount << "/5)" << endl;
